@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+{% extends "nav.html "%}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block body_block %}
+
+
+<!-- Intro
+	================================================== -->
+<section id="hero" class="section img-responsive" style="background-image: url('{% static 'img/b0.jpg' %}'); background-size:100% 100%; background:rgba(255,0,0,0.3);">
+<div class="container">
+	<div class="row">
+		<div class="col-md-5 ">
+			<div class="herotext mx-auto" style='margin:0 auto;'>
+				<h1 class="wow bounceInDown" data-wow-duration="1s" data-wow-delay="0.1s">BLOOD <span class="lighter">BANK</span></h1>
+				<p class="lead wow zoomIn" data-wow-duration="2s" data-wow-delay="0.5s">
+					When we give cheerfully and accept gratefully, everyone is blessed.
+				</p>
+				<p>
+					<a href="{% url "Myapp:donors"%}" class="btn btn-default btn-lg wow fadeInLeft" role="button"> View Donors </a> &nbsp; <a href="#importance" class="btn btn-default btn-lg wow fadeInRight" role="button">Why Donate???</a>
+				</p>
+			</div>
+		</div>
+		<div class="col-md-7">
+		</div>
+	</div>
+</div>
+</section>
+<!-- About
+	================================================== -->
+<section id="about" class="parallax section" style="background-image: url('{% static 'img/b1.jpg'%}');">
+<div class="wrapsection">
+	<div class="parallax-overlay" style="background-color: #01b0d1;opacity:0.9;"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<!-- Title -->
+				<div class="maintitle">
+					<h3 class="section-title"><strong>Who</strong> We Are</h3>
+					<p class="lead">
+						There are lot of activities held by us including blood donation camp and awareness camp.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="service-box wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s">
+					<img src="{% static "img/camp.jpg"%}" alt="Blood Donation Camp">
+					<h3>August 7, 2017 <br/>New York</h3>
+					<div class="text-left">
+						<p>
+							We organized a blood donation camp on August 2017.
+						</p>
+						<p>
+							There were a so many paricipants both donors, as well as  demanders.
+						</p>
+						<p>
+							As Blood is an important resource, both for planned treatments and urgent interventions.
+							People can safeguard themselves against cancer and heart attacks by donating blood regularly.
+
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="service-box wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.1s">
+					<span class="glyphicon glyphicon-stats"></span>
+					<h3>Participants</h3>
+					<p>
+						In light of the predicted shortages in blood supply, it is vital to consider ways in which to maximise donation rates. These include addressing the issue of lower donation rates among ethnic minorities, including Indians.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="service-box wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.2s">
+					<span class="glyphicon glyphicon-tree-deciduous"></span>
+					<h3>World donor's day</h3>
+					<p>
+						Every year, on 14 June, countries around the world celebrate World Blood Donor Day. The event serves to thank voluntary, unpaid blood donors for their life-saving gifts of blood and to raise awareness of the need for regular blood donations.				</p>
+				</div>
+
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="service-box wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.3s">
+					<span class="glyphicon glyphicon-heart"></span>
+					<h3>268 Sponsors</h3>
+					<p>
+						Sponsers plays an very active role in blood donation process.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="service-box wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.4s">
+					<i class="fas fa-tint" style='font-size:50px;'></i>
+					<h3> Donated</h3>
+					<p>
+						The demand for blood and blood products is constant throughout the year, but the reality is that donations drop off in the summer months.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="row mx-0">
+			<div class="col-md-12">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.056119523614!2d76.69247711440084!3d30.71682269345176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fee5a42944be3%3A0xb713d3a3e26a89c1!2sSachTech+Solution+Pvt.+Ltd.!5e0!3m2!1sen!2sin!4v1530452125841" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+
+<!-- Random
+	================================================== -->
+<section class="parallax section" style="background-image: url('{% static 'img/background.jpg' %}');">
+	<div class="wrapsection">
+	<div class="parallax-overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 sol-sm-12">
+				<div class="maintitle">
+					<h3 class="section-title justtitle">Participation is everything</h3>
+					<p class="lead bottom0 wow bounceInUp">
+						Fusce fermentum lectus id turpis suscipit, ut egestas magna volutpat. Donec a purus tellus. Nunc ut dolor eu est gravida auctor quis vitae.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
+<!-- Gallery
+	================================================== -->
+<section id="gallery" class="parallax section" style="background-image: url('{% static 'img/b2.jpg' %}');">
+<div class="wrapsection">
+	<div class="parallax-overlay" style="background-color:#00c1c1;opacity:0.9;"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 sol-sm-12">
+				<div class="maintitle">
+					<h3 class="section-title">Our Doctors</h3>
+					<p class="lead wow flipInX">
+						Have a look at our Registered doctors.
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<a href="{% static "img/doct2.jpg" %}" title="Dr. Sherly Coram">
+					<img src="{% static "img/doct2.jpg" %}" alt="Dr. Sherly Coram" class="image-responsive">
+					<div class="description">
+						<span class="caption"> Dr. <strong>Sherly Coram</strong></span>
+						<span class="camera"><i class="fa fa-camera"></i></span>
+						<div class="clearfix"></div>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-4">
+				<a href="{% static "img/doct4.jpg" %}" title="Dr. Robt Abram">
+					<img src="{% static "img/doct4.jpg" %}" alt="Dr. Robt Abram" class="image-responsive">
+					<div class="description">
+						<span class="caption">Dr. <strong>Robt Abram</strong></span>
+						<span class="camera"><i class="fa fa-camera"></i></span>
+						<div class="clearfix"></div>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-4">
+				<a href="{% static "img/doct5.jpg" %}" title="Dr. Maria Waits">
+					<img src="{% static "img/doct5.jpg" %}" alt="Dr. Maria Waits" class="image-responsive">
+					<div class="description">
+						<span class="caption">Dr.<strong>Maira Waits</strong></span>
+						<span class="camera"><i class="fa fa-heart"></i></span>
+						<div class="clearfix"></div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<!-- Text Carousel
+	================================================== -->
+<section id="slider" class="parallax section" style="background-image: url('{% static 'img/background.jpg' %}');">
+<div class="wrapsection">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div id="Carousel" class="carousel slide">
+					<ol class="carousel-indicators">
+						<li data-target="#Carousel" data-slide-to="0" class="active"></li>
+						<li data-target="#Carousel" data-slide-to="1"></li>
+						<li data-target="#Carousel" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active">
+							<blockquote>
+								<p class="lead">
+									You have not lived today until you have done something for someone who can never repay you.
+								</p>
+								<small>John Bunyan, Marathon</small>
+							</blockquote>
+						</div>
+						<div class="item">
+							<blockquote>
+								<p class="lead">
+									The simplest acts of kindness are by far more powerful then a thousand heads bowing in prayer.
+								</p>
+								<small>Mahatma Gandhi</small>
+							</blockquote>
+						</div>
+						<div class="item">
+							<blockquote>
+								<p class="lead">
+									There is no exercise better for the heart than reaching down and lifting people up.
+								</p>
+								<small>John Holmes, Organizer</small>
+							</blockquote>
+						</div>
+					</div>
+					<a class="left carousel-control" href="#Carousel" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a class="right carousel-control" href="#Carousel" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<!-- FAQ
+	================================================== -->
+<div class="container" id='faq'>
+	<div class="row" >
+		<div class="col-md-12" style='margin-top:10%; margin-bottom:10%;'>
+			<div class="maintitle">
+				<h3 class="section-title" >Who Donate Whom</h3>
+				<img src="{% static "img/who.png "%}" alt="Who Donate Whom" height='100%' width='100%'>
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Random
+	================================================== -->
+<section class="whitecolor parallax section"  id='importance' style="background-image: url('{% static 'img/5.jpg' %}');">
+<div class="wrapsection">
+	<div class="container">
+	<div class="row">
+		<div class="col-md-12 sol-sm-12">
+			<div class="maintitle">
+				<h3 class="section-title justtitle">Charity <span class="wow flipInX">&amp; love</span> are the same</h3>
+				<p class="lead bottom0">
+						Donation of Blood means a few minutes to you but a lifetime for somebody else
+				</p>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+	<div class="container-fluid">
+		<div class="row my-5 ">
+			<div class="col-md-6 " style='margin:20px 0px 20px 0px'>
+				<iframe width="100%" height="315" src="https://www.youtube.com/embed/obXjlquHlhE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+			<div class="col-md-6" style='margin:20px 0px 20px 0px'>
+				<iframe width="100%" height="315" src="https://www.youtube.com/embed/oXhsvlUx9fc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+			<div class="col-md-6" style='margin:20px 0px 20px 0px'>
+				<iframe width="100%" height="315" src="https://www.youtube.com/embed/E-TNZjMDs1w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+			<div class="col-md-6" style='margin:20px 0px 20px 0px'>
+				<iframe width="100%" height="315" src="https://www.youtube.com/embed/HLFzP1D7PKk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Contact
+	================================================== -->
+<section id="contactarea" class="parallax section" style="background-image: url(http://themepush.com/demo/runcharity/assets/img/map.png);">
+<div class="wrapsection">
+	<div class="parallax-overlay" style="background-color: #e83a4b;opacity:0.95;"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="maintitle">
+					<h3 class="section-title">Get in Touch</h3>
+					<p class="lead">
+						If you have questions about our events, don't hesitate to send us your message.
+					</p>
+				</div>
+				<form method="post"  onsubmit="myfun()">
+					<fieldset>
+						<div class="row">
+							<div class="col-md-12 wow fadeIn animated animated" data-wow-delay="0.1s" data-wow-duration="2s">
+								<table>
+
+		              {% crispy contact %}
+		              {% csrf_token %}
+		            </table>
+								<input type="submit" class='btn btn-secondary' style='background-color:red; color:white; border-radius:10px;' value="POST">
+								<script>
+									function myfn(){
+										alert("Thanks for Your Feedback");
+									}
+								</script>
+								</div>
+							</div>
+					</fieldset>
+
+				</form>
+
+		</div>
+	</div>
+</div>
+</section>
+
+<div class="container-fluid text-center" style='margin:0px;'>
+  <div class="row">
+    <div class="col-md-12" style="padding:0px; background:black; color:white;">
+      <strong>Powered By :</strong> <br/> <i class="fa fa-user" style='padding-right:2px;'></i> Sourabh & <br/> <i class="fa fa-user pr-2" style='padding-right:2px;'></i> Reeya<br/>
+			<span class='justify-content-center'>Copyright &copy; <a href="http://www.sachtechsolution.com/" style='color:white;'>Sachtech Solution Pvt. ltd.</a></span>
+
+    </div>
+	</div>
+</div>
+
+{% endblock %}

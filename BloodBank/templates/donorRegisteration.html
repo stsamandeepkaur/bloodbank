@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<html>
+  <head>
+    <title>BLOOD BANK</title>
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css"%}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> -->
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script>
+      $(document).ready(function(){
+        $('#id_First_Name').attr("pattern","[A-Za-z]{2,}");
+        $('#id_First_Name').attr("title","Please Use Characters only");
+        $('#id_Last_Name').attr("pattern","[A-Za-z]{2,}");
+        $('#id_Last_Name').attr("title","Please Use Characters only");
+        $('#id_Date_of_birth').attr("required","reuired");
+
+      });
+   </script>
+   <style media="screen">
+   div.transbox {
+      margin:5%;
+      background-color: #ffffff;
+      border: 1px solid red;
+      opacity: 0.6;
+      padding:5%;
+      border-radius: 10px;
+}
+  .link{
+    font-size:20px;
+    display:inline;
+    border-radius:5px;
+    color:white;
+    margin:10px;
+    text-align:center;
+  }
+  .link:hover{
+    color:white;
+    font-size:25px;
+  }
+   </style>
+  </head>
+  <body style=' background:url("{% static "img/b1.jpg" %}"); background-size:100% 100%; background-attachment:fixed;'>
+    <div class="containr-fluid">
+      <div class="row bg-light">
+        <div class="col-md-4">
+          <a href="{% url "index" %}" class="navbar-brand"><span class='line-height:50px;'><span style='color:red;' ><i class="fas fa-tint" style='font-size:50px;'></i><span></a>
+        </div>
+        <div class='col-md-8 text-right'>
+                <a href="{% url "Myapp:donors" %}" style='display:inline-block' class=' nav-link btn btn-outline-warning'> View Donors </a>
+                <a href="{% url "index" %}" style='display:inline-block' class='nav-link btn  btn-warning text-white'><i class="fas fa-backward pr-2"></i>Go to Homepage</a>
+        </div>
+      </div>
+      <div class="row h-100 justify-content-center py-5" style="font-family:arial;  background-image: url('{% static 'img/b0.jpg' %}'); background-size:100% 100%; background-attachment:fixed;">
+        <div class="col-md-6 transbox">
+          <h2 class=' text-dark text-center'>The blood you donate gives someone</h2><h2 class='text-ceneter text-success' style='margin-left:20%;'> another chance at life</h2>
+          <h1 class='text-center'>Give the gift of life<br/> <span  style='font-weight:bold; color:red;'>DONATE BLOOD<i class="fas fa-tint" style='font-size:50px;'></i></span></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class='alert-primary text-center py-4 my-2'> <i class="fas fa-tint" style='font-size:50px; color:red;'></i>Fill Out the Form below:<i class="fas fa-tint" style='font-size:50px; color:red;'></i></h1>
+        </div>
+      </div>
+    </div>
+    <div class="container h-100  bg-light my-5 py-5" style='border-radius:10px;'>
+
+      <div class="row h-100 justify-content-center align-items-center" >
+        <div class="col-md-6 col-sm-12">
+          <form  method="post">
+          <div class="form-group">
+            <table>
+
+              {% crispy form %}
+              {% csrf_token %}
+            </table>
+          </div>
+          <div class="form-group">
+            <input type="submit" class='btn btn-success' value="Register">
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+      <div class="container-fluid text-center" style='margin:0px;'>
+        <div class="row">
+          <div class="col-md-12" style="padding:0px; background:black; color:white;">
+            <strong>Powered By :</strong> <br/> <i class="fa fa-user" style='padding-right:2px;'></i> Sourabh & <br/> <i class="fa fa-user pr-2" style='padding-right:2px;'></i> Reeya<br/>
+      			<span class='justify-content-center'>Copyright &copy; <a href="http://www.sachtechsolution.com/" style='color:white;'>Sachtech Solution Pvt. ltd.</a></span>
+
+          </div>
+      	</div>
+      </div>
+  </body>
+</html>
